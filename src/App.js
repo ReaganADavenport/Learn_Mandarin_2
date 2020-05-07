@@ -1,24 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+
+//Components
+import Header from './components/header';
+import Footer from './components/footer';
+
+import Home from './components/home';
+import Radicals from './components/radicals';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet"/>
+      <Router>
+        <Header />
+        <Route path="/" exact component={Home} />
+        <Route path="/radicals" component={Radicals} />
+
+        <Footer />
+      </Router>
     </div>
   );
 }

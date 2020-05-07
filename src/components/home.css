@@ -1,0 +1,15 @@
+.Home {
+    background-image: url('../images/bamboo.jpg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    font-family: 'Amiri', serif;
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.Home ul{
+    list-style: none;
+}
